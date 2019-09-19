@@ -50,7 +50,9 @@ public static class GameController
 	public static Player ComputerPlayer {
 		get { return _ai; }
 	}
-
+    /// <summary>
+    /// The constructor of GameController Class.
+    /// </summary>
 	static GameController()
 	{
 		//bottom state will be quitting. If player exits main menu then the game is over
@@ -118,7 +120,12 @@ public static class GameController
 		DrawScreen();
 		SwinGame.RefreshScreen();
 	}
-
+    /// <summary>
+    /// When a player chooses a matched cell corresponding to the openent's ship. The sound is played and a red color will be filled in this cell.
+    /// </summary>
+    /// <param name="row"></param>
+    /// <param name="column"></param>
+    /// <param name="showAnimation"></param>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -129,7 +136,12 @@ public static class GameController
 
 		UtilityFunctions.DrawAnimationSequence();
 	}
-
+    /// <summary>
+    /// If it is a missing hit, the sound for missing is played and the cell is filled with blue color.
+    /// </summary>
+    /// <param name="row"></param>
+    /// <param name="column"></param>
+    /// <param name="showAnimation"></param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -333,8 +345,7 @@ public static class GameController
 				HighScoreController.DrawHighScores();
 				break;
 		}
-
-		UtilityFunctions.DrawAnimations();
+        UtilityFunctions.DrawAnimations();
 
 		SwinGame.RefreshScreen();
 	}
