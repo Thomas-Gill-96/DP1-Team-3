@@ -1,0 +1,9 @@
+C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\BattleshipAnalysing.csprojAssemblyReference.cache
+C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\BattleshipAnalysing.csproj.CoreCompileInputs.cache
+C:\Users\trang\Desktop\BattleshipsC#\bin\Debug\lib\SwinGame.dll.mdb
+C:\Users\trang\Desktop\BattleshipsC#\bin\Debug\ConsoleApplication.exe
+C:\Users\trang\Desktop\BattleshipsC#\bin\Debug\ConsoleApplication.pdb
+C:\Users\trang\Desktop\BattleshipsC#\bin\Debug\SwinGame.dll
+C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\BattleshipAnalysing.csproj.CopyComplete
+C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\ConsoleApplication.pdb
