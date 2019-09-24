@@ -139,9 +139,6 @@ public static class GameController
     /// <summary>
     /// If it is a missing hit, the sound for missing is played and the cell is filled with blue color.
     /// </summary>
-    /// <param name="row"></param>
-    /// <param name="column"></param>
-    /// <param name="showAnimation"></param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -156,8 +153,6 @@ public static class GameController
 	/// <summary>
 	/// Listens for attacks to be completed.
 	/// </summary>
-	/// <param name="sender">the game</param>
-	/// <param name="result">the result of the attack</param>
 	/// <remarks>
 	/// Displays a message, plays sound and redraws the screen
 	/// </remarks>
@@ -173,11 +168,13 @@ public static class GameController
 		}
 
 		switch (result.Value) {
+			///if result of attack destroys ship, plays a hit sequence and sink audio
 			case ResultOfAttack.Destroyed:
 				PlayHitSequence(result.Row, result.Column, isHuman);
 				Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
 
 				break;
+			///if the game is over, plays a hit sequence and sink audio.
 			case ResultOfAttack.GameOver:
 				PlayHitSequence(result.Row, result.Column, isHuman);
 				Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
@@ -186,7 +183,7 @@ public static class GameController
 					SwinGame.Delay(10);
 					SwinGame.RefreshScreen();
 				}
-
+				///if the human ship is destroyed, play lose audio, else play win audio.
 				if (HumanPlayer.IsDestroyed) {
 					Audio.PlaySoundEffect(GameResources.GameSound("Lose"));
 				} else {
@@ -194,12 +191,15 @@ public static class GameController
 				}
 
 				break;
+			/// if result of attack hits a ship, play the hit sequence
 			case ResultOfAttack.Hit:
 				PlayHitSequence(result.Row, result.Column, isHuman);
 				break;
+			/// if result of attack miss a ship, play the miss sequence
 			case ResultOfAttack.Miss:
 				PlayMissSequence(result.Row, result.Column, isHuman);
 				break;
+			/// if result of attack is hit already, play the error audio
 			case ResultOfAttack.ShotAlready:
 				Audio.PlaySoundEffect(GameResources.GameSound("Error"));
 				break;
@@ -284,7 +284,7 @@ public static class GameController
 	{
 		//Read incoming input events
 		SwinGame.ProcessEvents();
-
+		//Different inputs for different states of the game
 		switch (CurrentState) {
 			case GameState.ViewingMainMenu:
 				MenuController.HandleMainMenuInput();
