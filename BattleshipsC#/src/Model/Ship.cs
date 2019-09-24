@@ -65,15 +65,15 @@ public class Ship
 	public int Row {
 		get { return _row; }
 	}
-
+	//The column location of the ship
 	public int Column {
 		get { return _col; }
 	}
-
+	//The direction of the ship
 	public Direction Direction {
 		get { return _direction; }
 	}
-
+	
 	public Ship(ShipName ship)
 	{
 		_shipName = ship;
@@ -102,7 +102,7 @@ public class Ship
 		}
 		_tiles.Clear();
 	}
-
+	//Add hits taken to ship when hit
 	public void Hit()
 	{
 		_hitsTaken = _hitsTaken + 1;
@@ -115,7 +115,7 @@ public class Ship
 	public bool IsDeployed {
 		get { return _tiles.Count > 0; }
 	}
-
+	// Returns if the ship is destroyed, hits equal to ship size
 	public bool IsDestroyed {
 		get { return Hits == Size; }
 	}
