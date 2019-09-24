@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 /// <summary>
 /// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
-/// all ships are deployed and if all ships are detroyed. A Player can also attach.
+/// all ships are deployed and if all ships are detroyed. A Player can also attack.
 /// </summary>
 public class Player : IEnumerable<Ship>
 {
@@ -119,7 +119,7 @@ public class Player : IEnumerable<Ship>
 	public int Missed {
 		get { return _misses; }
 	}
-
+	//How score is calculated
 	public int Score {
 		get {
 			if (IsDestroyed) {
@@ -197,7 +197,7 @@ public class Player : IEnumerable<Ship>
 
 		return result;
 	}
-
+	// deploys all ships in a random position
 	public virtual void RandomizeDeployment()
 	{
 		bool placementSuccessful = false;
