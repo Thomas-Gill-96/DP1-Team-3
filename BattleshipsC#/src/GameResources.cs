@@ -9,7 +9,7 @@ using SwinGameSDK;
 
 public static class GameResources
 {
-
+	//Loads the fonts to the game
 	private static void LoadFonts()
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
@@ -17,7 +17,7 @@ public static class GameResources
 		NewFont("CourierSmall", "cour.ttf", 10);
 		NewFont("Menu", "ffaccess.ttf", 10);
 	}
-
+	//Loads the images to the game
 	private static void LoadImages()
 	{
 		//Backgrounds
@@ -44,7 +44,8 @@ public static class GameResources
 		NewImage("Splash", "splash.png");
 
 	}
-
+	
+	//Loads the audio files to the game
 	private static void LoadSounds()
 	{
 		NewSound("Error", "error.wav");
@@ -55,7 +56,7 @@ public static class GameResources
 		NewSound("Winner", "winner.wav");
 		NewSound("Lose", "lose.wav");
 	}
-
+	//Loads the audio music files to the game
 	private static void LoadMusic()
 	{
 		NewMusic("Background", "horrordrone.mp3");
@@ -121,7 +122,8 @@ public static class GameResources
 	/// The Resources Class stores all of the Games Media Resources, such as Images, Fonts
 	/// Sounds, Music.
 	/// </summary>
-
+	
+	//This method loads all the resources
 	public static void LoadResources()
 	{
 		int width = 0;
@@ -155,7 +157,7 @@ public static class GameResources
 		SwinGame.Delay(100);
 		EndLoadingScreen(width, height);
 	}
-
+	//Displays the loading screen
 	private static void ShowLoadingScreen()
 	{
 		_Background = SwinGame.LoadBitmap(SwinGame.PathToResource("SplashBack.png", ResourceKind.BitmapResource));
@@ -172,7 +174,7 @@ public static class GameResources
 
 		PlaySwinGameIntro();
 	}
-
+	//Displays the swingame intro
 	private static void PlaySwinGameIntro()
 	{
 		const int ANI_X = 143;
@@ -197,7 +199,7 @@ public static class GameResources
 		SwinGame.Delay(1500);
 
 	}
-
+	//Shows a message
 	private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;
@@ -219,7 +221,7 @@ public static class GameResources
 		SwinGame.RefreshScreen();
 		SwinGame.ProcessEvents();
 	}
-
+	//Loads the resources for end loading screen
 	private static void EndLoadingScreen(int width, int height)
 	{
 		SwinGame.ProcessEvents();
@@ -234,58 +236,58 @@ public static class GameResources
 		Audio.FreeSoundEffect(_StartSound);
 		SwinGame.ChangeScreenSize(width, height);
 	}
-
+	//Add new font
 	private static void NewFont(string fontName, string filename, int size)
 	{
 		_Fonts.Add(fontName, SwinGame.LoadFont(SwinGame.PathToResource(filename, ResourceKind.FontResource), size));
 	}
-
+	//Add new image
 	private static void NewImage(string imageName, string filename)
 	{
 		_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(filename, ResourceKind.BitmapResource)));
 	}
-
+	//Add new transparent color image
 	private static void NewTransparentColorImage(string imageName, string fileName, Color transColor)
 	{
 		_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(fileName, ResourceKind.BitmapResource), true, transColor));
 	}
-
+	//Add new transparent color image
 	private static void NewTransparentColourImage(string imageName, string fileName, Color transColor)
 	{
 		NewTransparentColorImage(imageName, fileName, transColor);
 	}
-
+	//Add new sound
 	private static void NewSound(string soundName, string filename)
 	{
 		_Sounds.Add(soundName, Audio.LoadSoundEffect(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 	}
-
+	//Add new music
 	private static void NewMusic(string musicName, string filename)
 	{
 		_Music.Add(musicName, Audio.LoadMusic(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 	}
-
+	//frees loaded font
 	private static void FreeFonts()
 	{
 		foreach (Font obj in _Fonts.Values) {
 			SwinGame.FreeFont(obj);
 		}
 	}
-
+	//frees loaded image
 	private static void FreeImages()
 	{
 		foreach (Bitmap obj in _Images.Values) {
 			SwinGame.FreeBitmap(obj);
 		}
 	}
-
+	//frees loaded sound
 	private static void FreeSounds()
 	{		
 		foreach (SoundEffect obj in _Sounds.Values) {
 			Audio.FreeSoundEffect(obj);
 		}
 	}
-
+	//frees loaded music
 	private static void FreeMusic()
 	{
 
@@ -293,7 +295,7 @@ public static class GameResources
 			Audio.FreeMusic(obj);
 		}
 	}
-
+	//frees loaded resources
 	public static void FreeResources()
 	{
 		FreeFonts();

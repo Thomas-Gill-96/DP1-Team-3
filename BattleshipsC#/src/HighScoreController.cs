@@ -121,7 +121,8 @@ static class HighScoreController
 		const int SCORES_HEADING = 40;
 		const int SCORES_TOP = 80;
 		const int SCORE_GAP = 30;
-
+		
+		//load scores if equal to 0
 		if (_Scores.Count == 0)
 			LoadScores();
 
