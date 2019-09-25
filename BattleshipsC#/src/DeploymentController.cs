@@ -13,6 +13,7 @@ using SwinGameSDK;
 /// </summary>
 static class DeploymentController
 {
+    //Ship's top button is 98
 	private const int SHIPS_TOP = 98;
 	private const int SHIPS_LEFT = 20;
 	private const int SHIPS_HEIGHT = 90;
