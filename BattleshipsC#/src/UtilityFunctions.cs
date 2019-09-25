@@ -38,8 +38,9 @@ static class UtilityFunctions
 	private static readonly Color SHIP_FILL_COLOR = Color.Gray;
 	private static readonly Color SHIP_OUTLINE_COLOR = Color.White;
 
-	private static readonly Color MESSAGE_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
-	public const int ANIMATION_CELLS = 7;
+    //private static readonly Color MESSAGE_COLOR = Color.Blue;
+    private static readonly Color MESSAGE_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
+    public const int ANIMATION_CELLS = 7;
 
 	public const int FRAMES_PER_CELL = 8;
 	/// <summary>

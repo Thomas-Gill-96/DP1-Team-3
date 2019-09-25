@@ -7,3 +7,12 @@ C:\Users\trang\Desktop\BattleshipsC#\bin\Debug\SwinGame.dll
 C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\BattleshipAnalysing.csproj.CopyComplete
 C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\ConsoleApplication.exe
 C:\Users\trang\Desktop\BattleshipsC#\obj\x86\Debug\ConsoleApplication.pdb
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\bin\Debug\lib\SwinGame.dll.mdb
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\bin\Debug\ConsoleApplication.exe
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\bin\Debug\ConsoleApplication.pdb
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\bin\Debug\SwinGame.dll
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\obj\x86\Debug\BattleshipAnalysing.csprojAssemblyReference.cache
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\obj\x86\Debug\BattleshipAnalysing.csproj.CoreCompileInputs.cache
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\obj\x86\Debug\BattleshipAnalysing.csproj.CopyComplete
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\obj\x86\Debug\ConsoleApplication.exe
+D:\Git\LabProject\DP1-Team-3-Battleship\BattleshipsC#\obj\x86\Debug\ConsoleApplication.pdb
