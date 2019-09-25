@@ -167,7 +167,7 @@ static class UtilityFunctions
 				}
 			}
 		}
-
+		//if it doesnt show ships then return
 		if (!showShips) {
 			return;
 		}
@@ -178,11 +178,12 @@ static class UtilityFunctions
 
 		//Draw the ships
 		foreach (Ship s in thePlayer) {
+			//continue if ship is null or not deployed
 			if (s == null || !s.IsDeployed)
 				continue;
 			rowTop = top + (cellGap + cellHeight) * s.Row + SHIP_GAP;
 			colLeft = left + (cellGap + cellWidth) * s.Column + SHIP_GAP;
-
+				//Left right
 			if (s.Direction == Direction.LeftRight) {
 				shipName = "ShipLR" + s.Size;
 				shipHeight = cellHeight - (SHIP_GAP * 2);
@@ -250,18 +251,18 @@ static class UtilityFunctions
 
 		SwinGame.DrawFramerate(675, 585, GameResources.GameFont("CourierSmall"));
 	}
-
+	//Adds explosion animation
 	public static void AddExplosion(int row, int col)
 	{
-		AddAnimation(row, col, "Splash");
+		AddAnimation(row, col, "Explosion");
 	}
-
+	//Adds splash animation
 	public static void AddSplash(int row, int col)
 	{
 		AddAnimation(row, col, "Splash");
 	}
 
-
+	//Method to add animation to the game
 	private static List<Sprite> _Animations = new List<Sprite>();
 	private static void AddAnimation(int row, int col, string image)
 	{
@@ -281,7 +282,7 @@ static class UtilityFunctions
 		s.StartAnimation("splash");
 		_Animations.Add(s);
 	}
-
+	//Updates the sequence of animation
 	public static void UpdateAnimations()
 	{
 		List<Sprite> ended = new List<Sprite>();
@@ -297,14 +298,14 @@ static class UtilityFunctions
 			SwinGame.FreeSprite(s);
 		}
 	}
-
+	//Draws the animations
 	public static void DrawAnimations()
 	{
 		foreach (Sprite s in _Animations) {
 			SwinGame.DrawSprite(s);
 		}
 	}
-
+	//Draws the sequence for animation
 	public static void DrawAnimationSequence()
 	{
 		int i = 0;

@@ -67,8 +67,9 @@ static class MenuController
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
 
 	private const int GAME_MENU_QUIT_BUTTON = 2;
+	//menu color
 	private static readonly Color MENU_COLOR = SwinGame.RGBAColor(2, 167, 252, 255);
-
+	//highlight color
 	private static readonly Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(1, 57, 86, 255);
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
@@ -111,6 +112,7 @@ static class MenuController
 	/// <returns>false if a clicked missed the buttons. This can be used to check prior menus.</returns>
 	private static bool HandleMenuInput(int menu, int level, int xOffset)
 	{
+		//end state if escape key is pressed
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.EndCurrentState();
 			return true;
