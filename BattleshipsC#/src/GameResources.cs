@@ -14,6 +14,7 @@ public static class GameResources
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
 		NewFont("Courier", "cour.ttf", 20);
+        NewFont("CourierLarge", "cour.ttf", 24);
 		NewFont("CourierSmall", "cour.ttf", 10);
 		NewFont("Menu", "ffaccess.ttf", 10);
 	}
